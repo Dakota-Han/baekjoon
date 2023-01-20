@@ -10,12 +10,9 @@ for i in range(M):
     a,b = map(int,read().split())
     g[a-1][b-1]=g[b-1][a-1]=1
 
-vi = 1
-
 def bfs():
 
     q=deque()
-    global vi
     vi = 1
     for k in range(1,N+1):
         if visit[k-1]==0:
@@ -30,4 +27,4 @@ def bfs():
             vi+=1
 
 bfs()
-print(vi-1)
+print(max(visit))
